@@ -5,7 +5,7 @@ kind: Deployment
 metadata:
   name: petclinic-deployment
 spec:
-  replicas: 2
+  replicas: 1
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -28,10 +28,10 @@ spec:
         resources:
           limits:
             cpu: '1'
-            memory: '1Gi'
+            memory: '500Mi'
           requests:
             cpu: '1'
-            memory: '1Gi'
+            memory: '500Mi'
         ports:
         - containerPort: 8080
       imagePullSecrets:
